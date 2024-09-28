@@ -3,8 +3,8 @@ import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
-    <div>
-      Go to create-brand route to see the form
+    <div className="h-screen place-content-center grid text-black font-semibold text-xl">
+      Click on userlist on sidebar
     </div>
   );
 }
