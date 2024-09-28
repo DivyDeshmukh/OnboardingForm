@@ -6,10 +6,12 @@ interface SelectProps {
   options: string[]; // Array of string options for the dropdown
   id?: string;
   placeholder?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void; // Add onChange handler prop
 }
 
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ label = "", className = "", options, id = "", placeholder = "" }, ref) => {
+  ({ label = "", className = "", options, id = "", placeholder = "", value = "", onChange }, ref) => {
     return (
       <div className="flex flex-col space-y-2">
         {label && (
@@ -20,7 +22,8 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         <select
           id={id}
           className={`p-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-black focus:ring-blue-500 ${className}`}
-          defaultValue=""
+          value={value} // Use value prop
+          onChange={onChange} // Use onChange prop
           ref={ref}
         >
           {placeholder && (

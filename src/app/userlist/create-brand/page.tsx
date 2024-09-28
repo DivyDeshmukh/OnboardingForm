@@ -11,7 +11,7 @@ function page() {
 
   return (
     <div>
-      <div className="flex items-center justify-between bg-gradient-to-r from-gray-100 to-gray-50 p-3 border-b border-gray-300 px-5 shadow-md rounded-t-lg" style={{ width: "calc(100vw - 270px)" }}>
+      <div className="flex items-center justify-between bg-gradient-to-r from-gray-100 to-gray-50 p-3 border-b border-gray-300 px-5 shadow-md rounded-t-lg" >
         <button
           className="flex items-center bg-gradient-to-r from-gray-200 to-gray-300 hover:from-gray-300 hover:to-gray-400 text-gray-700 font-medium px-4 py-[6px] rounded-lg shadow transition-transform transform hover:scale-105"
           onClick={() => router.back()}

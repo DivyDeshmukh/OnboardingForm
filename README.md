@@ -2,7 +2,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:- 
+  ```bash
+    git clone https://github.com/ixartz/Next-js-Boilerplate.git
+  ```
+After this, go to the project folder,
+then install all the required dependencies:-
+``` bash
+        npm i
+``` 
+then run the server
 
 ```bash
 npm run dev

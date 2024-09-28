@@ -120,20 +120,20 @@ function Sidebar() {
   ];
 
   return (
-    <div
-      className="w-[270px] bg-[#263238] px-4 py-4 flex flex-col gap-3 scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-300 overflow-y-auto overflow-x-hidden h-auto"
-      // style={{ height: "calc(100vh - 60px)" }}
-    >
+    <div className="w-[270px] md:w-[280px] bg-[#263238] px-4 py-4 flex-col gap-3 scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-300 overflow-y-auto overflow-x-hidden h-auto md:h-screen transition-all duration-300 hidden md:flex">
+      {/* User Section */}
       <div id="user" className="flex gap-4 items-center mb-2 mt-2">
         <div className="bg-gray-500 rounded-full w-8 h-8 flex items-center justify-center">
           <span className="text-white">D</span>
         </div>
-        <h3 className="text-lg">Devteam!</h3>
+        <h3 className="text-lg text-white">Devteam!</h3>
       </div>
-      <div className={"flex flex-col gap-3 ml-1"}>
+
+      {/* Menu Items */}
+      <div className="flex flex-col gap-3 ml-1">
         {menuItems.map((item: MenuItem, idx: number) => (
           <div key={idx} className="flex items-center">
-            <div id="icon" className="w-5 text-center flex-shrink-0">
+            <div id="icon" className="w-4 text-center flex-shrink-0">
               <CustomIcon
                 icon={item.icon}
                 size="lg"
@@ -142,7 +142,7 @@ function Sidebar() {
             </div>
             <Link
               href={item.slug}
-              className="w-full text-left ml-4 text-slate-100 whitespace-nowrap"
+              className="w-full text-left text-sm md:text-md ml-4 text-slate-100 whitespace-nowrap"
             >
               {item.name}
             </Link>
